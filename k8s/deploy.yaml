@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dojo
+spec:
+  selector:
+    matchLabels:
+      app: dojo
+  template:
+    metadata:
+      labels:
+        app: dojo
+    spec:
+      containers:
+      - name: dojo
+        image: wandribeiro/dojo_bookstore:v1
+        resources:
+        ports:
+        - containerPort: 8080
