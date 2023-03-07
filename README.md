@@ -5,3 +5,4 @@
 - Terraform >= 1.0.0
 - Docker 
 - Kubectl
+- K3d
