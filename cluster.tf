@@ -1,16 +1,24 @@
 resource "k3d_cluster" "mycluster" {
-  name    = "k3d-terraform"
+  name    = "k8s-cluster-by-k3d"
   servers = 1
-  agents  = 2
+  agents  = 3 # Amount of node, except Control-Plane Master
 
   kube_api {
-    host      = "localhost"
-    host_ip   = "127.0.0.1"
+    host    = "localhost"
+    host_ip = "127.0.0.1"
   }
 
   image   = "rancher/k3s:v1.23.14-k3s1"
   network = "my-custom-net"
   token   = "superSecretToken"
+
+  runtime {
+    gpu_request   = "all"
+    agents_memory = "1024M" # Memory of each node
+  }
+
+
+  ## Optional configs
 
   port {
     host_port      = 8000
@@ -26,12 +34,9 @@ resource "k3d_cluster" "mycluster" {
   }
 
   kubeconfig {
-    update_default_kubeconfig = true
-    switch_current_context    = true
+    update_default_kubeconfig = false
+    switch_current_context    = false
   }
 
-  runtime {
-    gpu_request = "all"
-    agents_memory = "1024M"
-  }
+
 }
