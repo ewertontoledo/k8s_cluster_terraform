@@ -1,18 +1,33 @@
-# Provisionar um cluster de kubernetes utilizando k3d em terraform
+# To Build a Kubernetes cluster, construct by Terraform [***Only for studies***]
 
-## Requisitos mínimos
+## Requirements
 
 - Terraform >= 1.0.0
 - Docker 
 - Kubectl
 - K3d (Opcional) - *Será instalado durante a execução do terraform*
 
-## Utilizando..
+## Using...
 
-git clone
-cd k8s_/scripts
-chmod +x install_k3d.sh
+> git clone url_repo
 
-cd .. && terraform plan
+```> cd k8s_/scripts
+
+chmod +x ./scripts/install_k3d.sh
+
+terraform init
+terraform plan
 terraform apply
 
+export KUBECTL=(path kubeconfig)**
+```
+
+
+**
+***path kubeconfig, usually "home/.k3d/"***
+
+```
+kubectl get nodes
+```
+
+> enjoy! 
