@@ -9,12 +9,14 @@
 
 ## Using...
 
-> Clone this repo into your machine.
+>1- Clone this repo into your machine.
 
+>2- Allow shell script execution and exec without password during 'terraform apply'
 ```
-cd scripts
+chmod +x scripts/install_k3d.sh
+sudo chown root scripts/install_k3d.sh
+sudo chmod 4755 scripts/install_k3d.sh
 
-chmod +x ./scripts/install_k3d.sh
 
 terraform init
 terraform plan
@@ -47,4 +49,4 @@ kubectl apply -f .
 
 <br>
 
-> enjoy! 
+> enjoy!
