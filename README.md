@@ -1,11 +1,11 @@
-# To Build a Kubernetes cluster, construct by Terraform [***Only for studies***]
+# Deploy a Kubernetes Cluster using Terraform [***Only for studies***]
 
 ## Requirements
 
 - Terraform >= 1.0.0
 - Docker 
 - Kubectl
-- K3d (Opcional) - *Será instalado durante a execução do terraform*
+- K3d (Optional) - *Will be installed during terraform execution.*
 
 ## Using...
 
