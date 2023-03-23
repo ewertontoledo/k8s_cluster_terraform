@@ -1,7 +1,7 @@
 resource "k3d_cluster" "mycluster" {
   name    = "k8s-cluster-by-k3d"
   servers = 1
-  agents  = 3 # Amount of node, except Control-Plane Master
+  agents  = 2 # Amount of node, except Control-Plane Master
 
   kube_api {
     host    = "localhost"

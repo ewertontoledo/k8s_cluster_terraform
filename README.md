@@ -9,9 +9,10 @@
 
 ## Using...
 
-> git clone url_repo
+> Clone this repo into your machine.
 
-```> cd k8s_/scripts
+```
+cd scripts
 
 chmod +x ./scripts/install_k3d.sh
 
@@ -21,13 +22,29 @@ terraform apply
 
 export KUBECTL=(path kubeconfig)**
 ```
-
-
 **
 ***path kubeconfig, usually "home/.k3d/"***
+
+> *example: export KUBECONFIG=~/.k3d/kubeconfig-k8s-cluster-by-k3d.yaml*
+
+
+## Checking..
 
 ```
 kubectl get nodes
 ```
+
+## Testing application in your cluster..
+
+```
+cd k8s
+
+kubectl apply -f .
+```
+
+**In your browser > http://localhost:8000**
+
+
+<br>
 
 > enjoy! 
