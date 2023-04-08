@@ -1,3 +1,6 @@
 # Add outras portas pro loadbalancer
+## added porta 80 para acessar o ingress
 
 k3d node edit k3d-k8s-cluster-by-k3d-serverlb --port-add 8082:30001
+
+k3d node edit k3d-k8s-cluster-by-k3d-serverlb --port-add 80:30002
