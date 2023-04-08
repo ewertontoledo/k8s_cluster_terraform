@@ -26,12 +26,6 @@ resource "k3d_cluster" "mycluster" {
     node_filters = [
       "loadbalancer",
     ]
-
-    host_port      = 8001
-    container_port = 30001
-    node_filters = [
-      "loadbalancer",
-    ]
   }
 
   k3d {
